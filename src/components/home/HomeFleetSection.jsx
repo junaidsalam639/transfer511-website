@@ -1,0 +1,60 @@
+import React from 'react'
+import { Link } from 'react-router'
+
+const HomeFleetSection = () => {
+  return (
+    <>
+      <section
+        className="fleet-cta fleet-cta--two fleet-cta--three wow fadeInUp"
+        data-wow-duration="1500ms"
+        data-wow-delay="300ms"
+      >
+        <div className="container">
+          <div className="fleet-cta__inner">
+            <div className="fleet-cta__inner__item">
+              <div className="sec-title">
+                <h6 className="sec-title__tagline bw-split-in-right">
+                  Available 24/7
+                </h6>
+                <h3 className="sec-title__title bw-split-in-left">
+                  Call Today For Booking
+                </h3>
+              </div>
+            </div>
+            <div className="fleet-cta__inner__item fleet-cta__inner__item--two">
+              <div className="fleet-cta__inner__item__call">
+                <a href="tel:+88-0123-654-99" className="fleet-cta__call">
+                  <div className="fleet-cta__call__icon">
+                    <i className="icon-telephone" />
+                    <i className="ripple" />
+                  </div>
+                  <div className="fleet-cta__call__content">
+                    <span className="fleet-cta__call__text">call emergency</span>
+                    <h6 className="fleet-cta__call__number">(800) 650 743</h6>
+                  </div>
+                </a>
+                <div
+                  className="fleet-cta__inner__bg"
+                  style={{
+                    backgroundImage:
+                      "url(/assets/images/shapes/background-cta.png)"
+                  }}
+                />
+              </div>
+            </div>
+            <div className="fleet-cta__inner__item">
+              <Link to="/contact" className="fleet-cta__inner__btn">
+                <span>Book A car</span>
+                <span>
+                  <i className="icon-up-right-arrow" />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default HomeFleetSection
