@@ -9080,7 +9080,6 @@ fieldset:disabled .btn {
     padding: .25rem !important
 }
 
-
 .p-3 {
     padding: 1rem !important
 }
@@ -9094,7 +9093,7 @@ fieldset:disabled .btn {
 }
 
 .px-0 {
-    padding-right: 0 !important;
+    paddFing-right: 0 !important;
     padding-left: 0 !important
 }
 

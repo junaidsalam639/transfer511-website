@@ -10,7 +10,7 @@ const CTAFooter = () => {
                         <div
                             className="cta-footer-two__bg"
                             style={{
-                                backgroundImage: "url(/assets/images/resources/cta-two-bg.png)"
+                                backgroundImage: "url(/assets/new-images/car.avif)"
                             }}
                         />
                         <div className="cta-footer-two__content">
@@ -28,7 +28,7 @@ const CTAFooter = () => {
                             </Link>
                         </div>
                         <div className="cta-footer-two__element">
-                            <img src="/assets/images/resources/cta-bike.png" alt="image" />
+                            <img src="/assets/new-images/car.avif" alt="image" />
                         </div>
                     </div>
                 </div>

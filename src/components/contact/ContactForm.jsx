@@ -8,8 +8,7 @@ const ContactForm = () => {
                     <div
                         className="page-header-one__bg"
                         style={{
-                            backgroundImage:
-                                "url(/assets/images/backgrounds/page-header-bg-1-13.jpg)"
+                            backgroundImage: "url(/assets/images/backgrounds/page-header-bg-1-1.jpg)"
                         }}
                     />
                 </div>

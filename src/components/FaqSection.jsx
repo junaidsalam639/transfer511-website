@@ -30,15 +30,16 @@ const FaqSection = () => {
       <div className="container">
         <div className="row gutter-y-40">
           <div className="col-lg-6">
-            <div className="faq-four__thumb wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-              <div className="faq-four__thumb__item">
-                <img src="/assets/images/resources/image-faq.png" alt="image" />
-              </div>
-              <div className="faq-four__thumb__cerle">
-                <img src="/assets/images/shapes/cercle-2-1.png" alt="image" />
-              </div>
-              <div className="faq-four__thumb__item-small">
-                <img src="/assets/images/resources/image-faq-2-1.png" alt="image" />
+            <div
+              className="about-two__thumb wow fadeInLeft"
+              data-wow-duration="1500ms"
+              data-wow-delay="100ms"
+            >
+              <div className="about-two__thumb__item">
+                <img
+                  src="/assets/new-images/faq/faq-one.avif"
+                  alt="about images"
+                />
               </div>
             </div>
           </div>

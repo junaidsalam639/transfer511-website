@@ -92,7 +92,7 @@ const HomeCompanySection = () => {
                       data-wow-duration="1500ms"
                       data-wow-delay="100ms"
                     >
-                      <img src="/assets/images/about/company-1-1.jpg" alt="image" />
+                      <img src="/assets/new-images/choose/choose-one.avif" alt="image" />
                       <span className="our-company__thumb__item__box" />
                     </div>
                     <div
@@ -101,7 +101,7 @@ const HomeCompanySection = () => {
                       data-wow-delay="100ms"
                     >
                       <span className="our-company__thumb__item__box" />
-                      <img src="/assets/images/about/company-1-2.jpg" alt="image" />
+                      <img src="/assets/new-images/choose/choose-two.avif" alt="image" />
                     </div>
                   </div>
                 </div>

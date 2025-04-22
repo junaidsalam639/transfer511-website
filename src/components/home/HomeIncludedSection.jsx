@@ -9,14 +9,14 @@ const HomeIncludedSection = () => {
               data-jarallax=""
               data-speed="0.30"
               style={{
-                backgroundImage: "url(/assets/images/backgrounds/we-included-1-1.jpg)"
+                backgroundImage: "url(/assets/new-images/banner/banner-three.jpeg)"
               }}
             />
             <div className="container">
               <div className="sec-title sec-title--five text-center">
                 <h6 className="sec-title__tagline bw-split-in-right">we included</h6>
                 <h3 className="sec-title__title bw-split-in-left">
-                  Our Rental Bike Includes
+                  Our Rental Car Includes
                 </h3>
               </div>
               <div className="we-included__list">

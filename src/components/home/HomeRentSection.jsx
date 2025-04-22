@@ -16,7 +16,8 @@ const HomeRentSection = () => {
               <div
                 className="rent-two__funfact__bg"
                 style={{
-                  backgroundImage: "url(/assets/images/backgrounds/funfact-bg-2-1.jpg)"
+                  backgroundImage: "url(/assets/new-images/banner/banner-one.jpg)",
+                  backgroundPosition: 'center'
                 }}
               />
               <div className="rent-two__funfact__item">
@@ -30,7 +31,7 @@ const HomeRentSection = () => {
                     </span>
                     <span />
                   </h3>
-                  <p className="rent-two__funfact__text">Scooters &amp; Bikes</p>
+                  <p className="rent-two__funfact__text">Scooters &amp; Cars</p>
                 </div>
               </div>
               <div className="rent-two__funfact__item">
@@ -72,7 +73,7 @@ const HomeRentSection = () => {
                     </span>
                     <span>M</span>
                   </h3>
-                  <p className="rent-two__funfact__text">Scooters &amp; Bikes</p>
+                  <p className="rent-two__funfact__text">Scooters &amp; Cars</p>
                 </div>
               </div>
             </div>
@@ -86,7 +87,7 @@ const HomeRentSection = () => {
                 HOW TO RENt
               </h6>
               <h3 className="sec-title__title bw-split-in-left">
-                Make 3 Simple Steps to <br /> Rent a bike!
+                Make 3 Simple Steps to <br /> Rent a Car!
               </h3>
             </div>
             <div className="row gutter-y-30">

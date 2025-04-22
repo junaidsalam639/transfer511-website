@@ -12,7 +12,7 @@ const Header = () => {
                         <div className="main-header__logo logo-retina">
                             <Link to="/">
                                 <img
-                                    src="/assets/images/logo-4-dark.png"
+                                    src="/assets/new-images/logo.png"
                                     alt="Rentol HTML"
                                     width={196}
                                     height={70}

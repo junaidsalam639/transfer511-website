@@ -14,13 +14,7 @@ const HomeAboutSection = () => {
                             >
                                 <div className="about-two__thumb__item">
                                     <img
-                                        src="/assets/images/about/about-2-1.jpg"
-                                        alt="about images"
-                                    />
-                                </div>
-                                <div className="about-two__thumb__item-two">
-                                    <img
-                                        src="/assets/images/about/about-2-3.jpg"
+                                        src="/assets/new-images/about/about-two.webp"
                                         alt="about images"
                                     />
                                 </div>
@@ -37,42 +31,6 @@ const HomeAboutSection = () => {
                                     </h3>
                                 </div>
                                 <div className="about-two__feature">
-                                    <div
-                                        className="about-two__feature__item wow fadeInUp"
-                                        data-wow-duration="1500ms"
-                                        data-wow-delay="200ms"
-                                    >
-                                        <div className="about-two__feature__icon">
-                                            <i className="icon-helmet" />
-                                        </div>
-                                        <div className="about-two__feature__content">
-                                            <h5 className="about-two__feature__title">
-                                                Easy Booking Process
-                                            </h5>
-                                            <p className="about-two__feature__text">
-                                                We have optimized the booking process so that our clients
-                                                can experience the easiest and the safest service!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="about-two__feature__item wow fadeInUp"
-                                        data-wow-duration="1500ms"
-                                        data-wow-delay="200ms"
-                                    >
-                                        <div className="about-two__feature__icon">
-                                            <i className="icon-motorcycle" />
-                                        </div>
-                                        <div className="about-two__feature__content">
-                                            <h5 className="about-two__feature__title">
-                                                Convenient Pick-Up &amp; Return Process
-                                            </h5>
-                                            <p className="about-two__feature__text">
-                                                We have optimized the booking process so that our clients
-                                                can experience the easiest and the safest service!
-                                            </p>
-                                        </div>
-                                    </div>
                                     <div
                                         className="about-two__feature__item wow fadeInUp"
                                         data-wow-duration="1500ms"

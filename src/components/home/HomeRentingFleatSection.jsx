@@ -2,28 +2,28 @@ import React from 'react';
 
 const fleetData = [
   {
-    image: "/assets/images/resources/bike-1-1.png",
+    image: "/assets/new-images/card/card-one.jpeg",
     price: "$25",
     title: "Suzuki - GSX",
-    text: "standard motor bike",
+    text: "standard motor Cars",
     link: "/",
   },
   {
-    image: "/assets/images/resources/bike-1-3.png",
+    image: "/assets/new-images/card/card-two.webp",
     price: "$25",
     title: "MV Agusta",
     text: "F4, Brutale",
     link: "/",
   },
   {
-    image: "/assets/images/resources/bike-1-1.png",
+    image: "/assets/new-images/card/card-three.jpeg",
     price: "$25",
     title: "Suzuki - GSX",
-    text: "standard motor bike",
+    text: "standard motor Cars",
     link: "/",
   },
   {
-    image: "/assets/images/resources/bike-1-3.png",
+    image: "/assets/new-images/card/card-four.jpeg",
     price: "$25",
     title: "MV Agusta",
     text: "F4, Brutale",
@@ -38,7 +38,7 @@ const HomeRentingFleatSection = () => {
         <div className="renting-fleet__top">
           <div className="sec-title sec-title--five text-center">
             <h6 className="sec-title__tagline bw-split-in-right">
-              available scooters &amp; Bikes
+              available scooters &amp; Cars
             </h6>
             <h3 className="sec-title__title bw-split-in-left">
               Our Renting Fleet
@@ -57,8 +57,8 @@ const HomeRentingFleatSection = () => {
           <div className="renting-fleet__carousel rentol-owl__carousel rentol-owl__carousel--with-shadow rentol-owl__carousel--filter owl-carousel owl-theme grid md:grid-cols-4 gap-5">
             {fleetData.map((item, index) => (
               <div className="renting-fleet__item item" key={index}>
-                <div className="renting-fleet__item__image">
-                  <img src={item.image} alt={item.title} />
+                <div className="renting-fleet__item__image overflow-hidden w-full">
+                  <img src={item.image} alt={item.title} className='h-48 w-full' />
                 </div>
                 <div className="renting-fleet__item__content">
                   <div className="renting-fleet__item__price">

@@ -14224,7 +14224,6 @@ body.megamenu-popup-active .mobile-nav__content {
   z-index: 1;
   text-align: center;
   background-color: #F0EAE5;
-  padding: 40px 0 0;
   transition: all 0.4s ease-in-out;
 }
 .renting-fleet__item__image {
@@ -14237,7 +14236,6 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .renting-fleet__item__image img {
   object-fit: cover;
-  width: auto !important;
   transition: all 0.4s ease-in-out;
 }
 .renting-fleet__item__image::after {
@@ -20136,7 +20134,6 @@ body.megamenu-popup-active .mobile-nav__content {
   color: var(--rentol-text, #7E7E7E);
   border: 1px solid transparent !important;
   z-index: 2;
-  cursor: pointer;
 }
 .banner-form__wrapper .banner-form .banner-form__control .bootstrap-select > .dropdown-toggle:active, .banner-form__wrapper .banner-form .banner-form__control .bootstrap-select > .dropdown-toggle:focus,
 .banner-form__wrapper .banner-form .banner-form__control input[type=text]:active,
