@@ -92,7 +92,7 @@ const Header = () => {
                     <div className="logo-box">
                         <Link to="/" aria-label="logo image">
                             <img
-                                src="/assets/images/logo-light.png"
+                                src="/assets/new-images/logo.png"
                                 width={169}
                                 alt="Rentol HTML"
                             />

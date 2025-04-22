@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { forwardRef, useState, useImperativeHandle } from "react";
 import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 
 const libraries = ["places"];
 
-const DistanceCalculator = ({ GOOGLE_MAPS_API_KEY, onSearch }) => {
+const DistanceCalculator = forwardRef(({ GOOGLE_MAPS_API_KEY, onSearch }, ref) => {
     const [startAutocomplete, setStartAutocomplete] = useState(null);
     const [endAutocomplete, setEndAutocomplete] = useState(null);
     const [startAddress, setStartAddress] = useState("");
@@ -18,51 +19,45 @@ const DistanceCalculator = ({ GOOGLE_MAPS_API_KEY, onSearch }) => {
     });
 
     const handleStartPlaceSelected = () => {
-        if (startAutocomplete) {
-            const place = startAutocomplete.getPlace();
-            if (place?.formatted_address) {
-                setStartAddress(place?.formatted_address);
-                setStartCoords(place?.geometry?.location?.toJSON());
-                if (endAddress) {
-                    calculateDistance(place?.formatted_address, endAddress);
-                }
-            }
+        const place = startAutocomplete?.getPlace();
+        if (place?.formatted_address) {
+            setStartAddress(place.formatted_address);
+            setStartCoords(place.geometry?.location?.toJSON());
         }
     };
 
     const handleEndPlaceSelected = () => {
-        if (endAutocomplete) {
-            const place = endAutocomplete.getPlace();
-            if (place?.formatted_address) {
-                setEndAddress(place?.formatted_address);
-                setEndCoords(place?.geometry?.location?.toJSON());
-                if (startAddress) {
-                    calculateDistance(startAddress, place?.formatted_address);
-                }
-            }
+        const place = endAutocomplete?.getPlace();
+        if (place?.formatted_address) {
+            setEndAddress(place.formatted_address);
+            setEndCoords(place.geometry?.location?.toJSON());
         }
     };
 
-    const calculateDistance = (origin, destination) => {
-        if (!origin || !destination) return;
+    const calculateDistance = async () => {
+        return new Promise((resolve, reject) => {
+            if (!startAddress || !endAddress) return reject("Missing addresses");
 
-        const service = new window.google.maps.DistanceMatrixService();
-        service.getDistanceMatrix(
-            {
-                origins: [origin],
-                destinations: [destination],
-                travelMode: window.google.maps.TravelMode.DRIVING,
-                unitSystem: window.google.maps.UnitSystem.METRIC,
-            },
-            (response, status) => {
-                if (status === "OK") {
-                    const distText = response?.rows[0]?.elements[0]?.distance?.text;
-                    setDistanceText(distText);
-                } else {
-                    console.error("Distance Matrix error:", status);
+            const service = new window.google.maps.DistanceMatrixService();
+            service.getDistanceMatrix(
+                {
+                    origins: [startAddress],
+                    destinations: [endAddress],
+                    travelMode: window.google.maps.TravelMode.DRIVING,
+                    unitSystem: window.google.maps.UnitSystem.METRIC,
+                },
+                (response, status) => {
+                    if (status === "OK") {
+                        const distText = response?.rows[0]?.elements[0]?.distance?.text;
+                        setDistanceText(distText);
+                        resolve(distText);
+                    } else {
+                        console.error("Distance Matrix error:", status);
+                        reject(status);
+                    }
                 }
-            }
-        );
+            );
+        });
     };
 
     const getPricePerKm = (distance) => {
@@ -78,24 +73,33 @@ const DistanceCalculator = ({ GOOGLE_MAPS_API_KEY, onSearch }) => {
 
     const parseDistance = (text) => parseFloat(text?.replace(/[^\d.]/g, ""));
 
-    const handleSearch = () => {
-        if (!startAddress || !endAddress || !distanceText || !startCoords || !endCoords) return;
+    const handleSearch = async () => {
+        if (!startAddress || !endAddress || !startCoords || !endCoords) return;
 
-        const distance = parseDistance(distanceText);
-        const pricePerKm = getPricePerKm(distance);
-        const totalPrice = (pricePerKm * distance).toFixed(2);
+        try {
+            const distText = await calculateDistance();
+            const distance = parseDistance(distText);
+            const pricePerKm = getPricePerKm(distance);
+            const totalPrice = (pricePerKm * distance).toFixed(2);
 
-        const tripDetails = {
-            startAddress,
-            endAddress,
-            startCoords,
-            endCoords,
-            distance,
-            pricePerKm,
-            totalPrice,
-        };
-        onSearch(tripDetails);
+            const tripDetails = {
+                startAddress,
+                endAddress,
+                startCoords,
+                endCoords,
+                distance,
+                pricePerKm,
+                totalPrice,
+            };
+            onSearch(tripDetails);
+        } catch (error) {
+            console.error("Failed to calculate distance", error);
+        }
     };
+
+    useImperativeHandle(ref, () => ({
+        triggerSearch: handleSearch,
+    }));
 
     if (loadError) return <div>Error loading Google Maps</div>;
     if (!isLoaded) return <div>Loading Google Maps...</div>;
@@ -124,13 +128,8 @@ const DistanceCalculator = ({ GOOGLE_MAPS_API_KEY, onSearch }) => {
                     />
                 </Autocomplete>
             </div>
-            <div className="banner-form__control banner-form__button md:hidden block">
-                <button className="rentol-btn w-full" onClick={handleSearch}>
-                    Search
-                </button>
-            </div>
         </>
     );
-};
+});
 
 export default DistanceCalculator;
