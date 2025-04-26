@@ -63,9 +63,11 @@ const HomeHeroSection = () => {
                                     <h5 className="main-slider-two__sub-title">{slide.subTitle}</h5>
                                     <h2 className="main-slider-two__title">{slide.title}</h2>
                                     <p className="main-slider-two__text text-center">{slide.text}</p>
-                                    <button className="rentol-btn" type="submit">
-                                        +92 29238 423 42
-                                    </button>
+                                    <a href="tel:+49 1765 7844670">
+                                        <button className="rentol-btn" type="submit">
+                                            +49 1765 7844670
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                             <div className="absolute inset-0 bg-black/50 z-0"></div>

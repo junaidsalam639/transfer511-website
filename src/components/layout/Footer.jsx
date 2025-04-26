@@ -109,11 +109,11 @@ const Footer = () => {
                                         <ul className="list-unstyled footer-widget__contact">
                                             <li>
                                                 <i className="icon-email-1" />
-                                                <Link to="mailto:info@rentol.com">info@company.com</Link>
+                                                <a href="mailto:info@transfer511.com">info@transfer511.com</a>
                                             </li>
                                             <li>
                                                 <i className="icon-telephone" />
-                                                <Link to="tel:1234567-565566">+91 123 654 900</Link>
+                                                <a href="tel:+49 1765 7844670">+49 1765 7844670</a>
                                             </li>
                                         </ul>
                                     </div>

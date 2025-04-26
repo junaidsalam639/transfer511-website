@@ -8,7 +8,7 @@ const RightFloatingIcons = () => {
   return (
     <div className="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex flex-col space-y-2 p-2">
       <a
-        href="https://wa.me/your-number"
+        href="https://wa.me/4917657844670"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-[#E66431] w-12 h-12 flex items-center justify-center rounded-l hover:opacity-90 transition"
@@ -18,15 +18,15 @@ const RightFloatingIcons = () => {
         </svg>
       </a>
 
-      <a
-        href="tel:+123456789"
+
+      <a href="tel:+49 1765 7844670"
         className="bg-[#E66431] w-12 h-12 flex items-center justify-center rounded-l hover:opacity-90 transition"
       >
         <Phone className="text-white w-6 h-6" />
       </a>
 
       <a
-        href="mailto:youremail@example.com"
+        href="mailto:info@transfer511.com"
         className="bg-[#E66431] w-12 h-12 flex items-center justify-center rounded-l hover:opacity-90 transition"
       >
         <Mail className="text-white w-6 h-6" />

@@ -23,14 +23,14 @@ const HomeFleetSection = () => {
             </div>
             <div className="fleet-cta__inner__item fleet-cta__inner__item--two">
               <div className="fleet-cta__inner__item__call">
-                <a href="tel:+88-0123-654-99" className="fleet-cta__call">
+                <a href="tel:+49 1765 7844670" className="fleet-cta__call">
                   <div className="fleet-cta__call__icon">
                     <i className="icon-telephone" />
                     <i className="ripple" />
                   </div>
                   <div className="fleet-cta__call__content">
-                    <span className="fleet-cta__call__text">call emergency</span>
-                    <h6 className="fleet-cta__call__number">(800) 650 743</h6>
+                    <span className="fleet-cta__call__text">call</span>
+                    <h6 className="fleet-cta__call__number">+49 1765 7844670</h6>
                   </div>
                 </a>
                 <div

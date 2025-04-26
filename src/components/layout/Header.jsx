@@ -52,8 +52,8 @@ const Header = () => {
                                             <i className="icon-cart" aria-hidden="true" />
                                         </Link>
                                     </div>
-                                    <Link
-                                        to="tel:+88-0123-654-99"
+                                    <a
+                                        href="tel:+49 1765 7844670"
                                         className="main-header__right__call"
                                     >
                                         <div className="main-header__right__icon">
@@ -64,10 +64,10 @@ const Header = () => {
                                                 call for rent
                                             </span>
                                             <h6 className="main-header__right__number">
-                                                +88 0123 654 99
+                                                +49 1765 7844670
                                             </h6>
                                         </div>
-                                    </Link>
+                                    </a>
                                 </div>
                                 <div
                                     onClick={() => setToogleBtn(!tootleBtn)}
@@ -123,7 +123,7 @@ const Header = () => {
                         </li>
                         <li>
                             <i className="fa fa-phone-alt" />
-                            <Link to="tel:666-888-0000">666 888 0000</Link>
+                            <a href="tel:+49 1765 7844670">+49 1765 7844670</a>
                         </li>
                     </ul>
                     <div className="mobile-nav__social">

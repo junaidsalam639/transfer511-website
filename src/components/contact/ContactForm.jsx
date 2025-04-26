@@ -42,16 +42,10 @@ const ContactForm = () => {
                                         <div className="contact-one__item__content">
                                             <h5 className="contact-one__item__title">Quick Contact</h5>
                                             <a
-                                                href="tel:91-0256-201-003"
+                                                href="tel:+49 1765 7844670"
                                                 className="contact-one__item__call"
                                             >
-                                                +91 0256 201 003
-                                            </a>
-                                            <a
-                                                href="tel:41-0003-5569-04"
-                                                className="contact-one__item__call"
-                                            >
-                                                +41 0003 5569 04
+                                                +49 1765 7844670
                                             </a>
                                         </div>
                                     </div>
@@ -65,16 +59,10 @@ const ContactForm = () => {
                                         <div className="contact-one__item__content">
                                             <h5 className="contact-one__item__title">support email</h5>
                                             <a
-                                                href="mailto:contact@rentolsuport.com"
+                                                href="mailto:info@transfer511.com"
                                                 className="contact-one__item__call"
                                             >
-                                                contact@rentolsuport.com
-                                            </a>
-                                            <a
-                                                href="mailto:info@rentol.com"
-                                                className="contact-one__item__call"
-                                            >
-                                                info@rentol.com
+                                                info@transfer511.com
                                             </a>
                                         </div>
                                     </div>
