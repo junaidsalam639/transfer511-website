@@ -27,11 +27,11 @@ const HomeRentSection = () => {
                 <div className="rent-two__funfact__content count-box counted">
                   <h3 className="rent-two__funfact__title">
                     <span className="count-text" data-stop={3870} data-speed={1500}>
-                      3870
+                      110
                     </span>
                     <span />
                   </h3>
-                  <p className="rent-two__funfact__text">Scooters &amp; Cars</p>
+                  <p className="rent-two__funfact__text">Fahrzeuge</p>
                 </div>
               </div>
               <div className="rent-two__funfact__item">
@@ -41,25 +41,23 @@ const HomeRentSection = () => {
                 <div className="rent-two__funfact__content count-box counted">
                   <h3 className="rent-two__funfact__title">
                     <span className="count-text" data-stop={69} data-speed={1500}>
-                      69
+                      50,560
                     </span>
-                    <span>K</span>
                   </h3>
-                  <p className="rent-two__funfact__text">Bookings Served</p>
+                  <p className="rent-two__funfact__text text-nowrap">Abgeschlossene Aufträge</p>
                 </div>
               </div>
-              <div className="rent-two__funfact__item">
+              <div className="rent-two__funfact__item ps-4">
                 <div className="rent-two__funfact__icon">
                   <i className="icon-emotions" />
                 </div>
                 <div className="rent-two__funfact__content count-box counted">
                   <h3 className="rent-two__funfact__title">
                     <span className="count-text" data-stop="5.9" data-speed={1500}>
-                      5.9
+                      30,500
                     </span>
-                    <span>M</span>
                   </h3>
-                  <p className="rent-two__funfact__text">Happy Customers</p>
+                  <p className="rent-two__funfact__text">Glückliche Kunden</p>
                 </div>
               </div>
               <div className="rent-two__funfact__item">
@@ -69,11 +67,10 @@ const HomeRentSection = () => {
                 <div className="rent-two__funfact__content count-box counted">
                   <h3 className="rent-two__funfact__title">
                     <span className="count-text" data-stop="2.5" data-speed={1500}>
-                      2.5
+                      10
                     </span>
-                    <span>M</span>
                   </h3>
-                  <p className="rent-two__funfact__text">Scooters &amp; Cars</p>
+                  <p className="rent-two__funfact__text">Jahre Erfahrung</p>
                 </div>
               </div>
             </div>
@@ -83,11 +80,8 @@ const HomeRentSection = () => {
         <div className="how-to-rent section-space">
           <div className="container">
             <div className="sec-title sec-title--five text-center">
-              <h6 className="sec-title__tagline bw-split-in-right">
-                HOW TO RENt
-              </h6>
               <h3 className="sec-title__title bw-split-in-left">
-                Make 3 Simple Steps to <br /> Rent a Car!
+                So funktioniert es
               </h3>
             </div>
             <div className="row gutter-y-30">
@@ -103,10 +97,10 @@ const HomeRentSection = () => {
                     </div>
                     <div className="how-to-rent__item__content">
                       <h5 className="how-to-rent__item__title">
-                        Choose A Ride
+                        Anfrage stellen
                       </h5>
                       <p className="how-to-rent__item__text">
-                        Select the one you want to rent using the catalogue.
+                        Online, telefonisch oder per WhatsApp
                       </p>
                     </div>
                   </div>
@@ -124,9 +118,9 @@ const HomeRentSection = () => {
                       <i className="icon-booking" />
                     </div>
                     <div className="how-to-rent__item__content">
-                      <h5 className="how-to-rent__item__title">Make A Booking</h5>
+                      <h5 className="how-to-rent__item__title">Buchung bestätigen</h5>
                       <p className="how-to-rent__item__text">
-                        Select the one you want to rent using the catalogue.
+                        wir garantieren eine schnelle Rückmeldung
                       </p>
                     </div>
                   </div>
@@ -145,10 +139,10 @@ const HomeRentSection = () => {
                     </div>
                     <div className="how-to-rent__item__content">
                       <h5 className="how-to-rent__item__title">
-                        Enjoy Your Ride
+                        Entspannt reisen
                       </h5>
                       <p className="how-to-rent__item__text">
-                        Select the one you want to rent using the catalogue.
+                        Wir kümmern uns um den Rest!
                       </p>
                     </div>
                   </div>

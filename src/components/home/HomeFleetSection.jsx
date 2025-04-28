@@ -14,10 +14,10 @@ const HomeFleetSection = () => {
             <div className="fleet-cta__inner__item">
               <div className="sec-title">
                 <h6 className="sec-title__tagline bw-split-in-right">
-                  Available 24/7
+                  24/7 Verfügbar
                 </h6>
                 <h3 className="sec-title__title bw-split-in-left">
-                  Call Today For Booking
+                  Rufen sie uns jetzt an
                 </h3>
               </div>
             </div>
@@ -43,12 +43,12 @@ const HomeFleetSection = () => {
               </div>
             </div>
             <div className="fleet-cta__inner__item">
-              <Link to="/contact" className="fleet-cta__inner__btn">
-                <span>Book A car</span>
+              <a href="#" className="fleet-cta__inner__btn">
+                <span>Jetzt Anrufen</span>
                 <span>
                   <i className="icon-up-right-arrow" />
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

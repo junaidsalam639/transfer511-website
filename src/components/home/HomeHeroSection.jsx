@@ -1,28 +1,42 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import DistanceCalculator from '../DistanceCalculator';
 import { useNavigate } from 'react-router';
+import DatePicker from "react-datepicker";
+import { TimePicker } from 'rsuite';
+import "react-datepicker/dist/react-datepicker.css";
+import 'rsuite/dist/rsuite.min.css';
+
+function TimePickerExample() {
+    return (
+        <div className="banner-form__control" style={{ overflow: 'visible' }}>
+            <TimePicker format="HH:mm" />
+        </div>
+    );
+}
+
+
 
 const slides = [
     {
         bg: '/assets/new-images/banner/banner-one.jpg',
-        subTitle: 'Largest Fleet of Vehicles, Trusted by millions',
-        title: 'self ride Car rentals',
+        subTitle: 'Einsteigen – Ankommen – Stressfrei reisen',
+        title: 'Ihr zuverlässiger Flughafentransfer in Frankfurt – pünktlich, komfortabel und sicher.',
         text: `Aqestic optio amet a ququam saepe aliquid voluate dicta fuga...`
     },
     {
         bg: '/assets/new-images/banner/banner-two.jpg',
-        subTitle: 'Largest Fleet of Vehicles, Trusted by millions',
-        title: 'self ride Car rentals',
+        subTitle: 'Einsteigen – Ankommen – Stressfrei reisen',
+        title: 'Ihr zuverlässiger Flughafentransfer in Frankfurt – pünktlich, komfortabel und sicher.',
         text: `Aqestic optio amet a ququam saepe aliquid voluate dicta fuga...`
     },
     {
         bg: '/assets/new-images/banner/banner-three.jpeg',
-        subTitle: 'Largest Fleet of Vehicles, Trusted by millions',
-        title: 'self ride Car rentals',
+        subTitle: 'Einsteigen – Ankommen – Stressfrei reisen',
+        title: 'Ihr zuverlässiger Flughafentransfer in Frankfurt – pünktlich, komfortabel und sicher.',
         text: `Aqestic optio amet a ququam saepe aliquid voluate dicta fuga...`
     }
 ];
@@ -30,6 +44,7 @@ const slides = [
 export const GOOGLE_MAPS_API_KEY = 'AIzaSyDXJS_VZMhnp0szh92aZGg8RHszz6RMQN8';
 
 const HomeHeroSection = () => {
+    const [startDate, setStartDate] = useState(new Date());
     const distanceRef = useRef();
     const navigate = useNavigate();
 
@@ -62,7 +77,6 @@ const HomeHeroSection = () => {
                                 <div className="relative z-50 flex flex-col justify-center items-center space-y-4">
                                     <h5 className="main-slider-two__sub-title">{slide.subTitle}</h5>
                                     <h2 className="main-slider-two__title">{slide.title}</h2>
-                                    <p className="main-slider-two__text text-center">{slide.text}</p>
                                     <a href="tel:+49 1765 7844670">
                                         <button className="rentol-btn" type="submit">
                                             +49 1765 7844670
@@ -74,8 +88,18 @@ const HomeHeroSection = () => {
                         </div>
                     </SwiperSlide>
                 ))}
-                <div className='absolute md:bottom-12 bottom-20 w-full md:px-20'>
-                    <div className="bg-[#EB3E32] bg-cover relative z-10 md:p-6 p-2 rounded-2xl">
+                <div className='absolute lg:bottom-56 md:bottom-12 bottom-20 w-full md:px-20'>
+                    <div
+                        style={{
+                            padding: '20px',
+                            backgroundColor: 'rgba(255, 255, 255, .7)',
+                            zIndex: 20
+                        }}
+                        className="relative z-10 rounded-2xl"
+                    >
+                        <h2 className="text-2xl text-black font-bold">Berechnen Sie jetzt Ihren Preis!</h2>
+                        <h2 className="text-2xl text-black font-bold mb-4">Unverbindlich abfragen – ohne versteckte Kosten.</h2>
+
                         <form className="banner-form__wrapper" onSubmit={(e) => e.preventDefault()}>
                             <div className="banner-form grid md:grid-cols-3 grid-cols-2 gap-4">
                                 <DistanceCalculator
@@ -84,10 +108,13 @@ const HomeHeroSection = () => {
                                     onSearch={handleTripSearch}
                                 />
                                 <div className="banner-form__control">
-                                    <input className="rentol-datepicker" type="text" placeholder="Pick up Date" />
+                                    <DatePicker
+                                        selected={startDate}
+                                        onChange={(date) => setStartDate(date)}
+                                    />
                                 </div>
                                 <div className="banner-form__control">
-                                    <input className="rentol-timepicker" type="text" placeholder="Time" />
+                                    <TimePickerExample />
                                 </div>
                                 <div className="banner-form__control">
                                     <input className="rentol-timepicker" type="text" placeholder="AnyWay" />
@@ -102,7 +129,7 @@ const HomeHeroSection = () => {
                     </div>
                 </div>
             </Swiper>
-        </section>
+        </section >
     );
 };
 

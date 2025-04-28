@@ -28,7 +28,7 @@ function HomePage() {
                     <HomeRentSection />
                     <HomeRentingFleatSection />
                     <HomeCompanySection />
-                    <HomeFeatureSection />
+                    {/* <HomeFeatureSection /> */}
                     <HomeIncludedSection />
                     <HomeFleetSection />
                     <div className="py-20">

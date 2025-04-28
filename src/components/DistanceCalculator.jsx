@@ -111,7 +111,7 @@ const DistanceCalculator = forwardRef(({ GOOGLE_MAPS_API_KEY, onSearch }, ref) =
                     <input
                         className="rentol-datepicker"
                         type="text"
-                        placeholder="Start Location"
+                        placeholder="Abholadresse - Komplett-Adresse eingeben"
                         value={startAddress}
                         onChange={(e) => setStartAddress(e.target.value)}
                     />
@@ -122,7 +122,7 @@ const DistanceCalculator = forwardRef(({ GOOGLE_MAPS_API_KEY, onSearch }, ref) =
                     <input
                         className="rentol-datepicker"
                         type="text"
-                        placeholder="Goal Location"
+                        placeholder="Destination address - Enter complete address"
                         value={endAddress}
                         onChange={(e) => setEndAddress(e.target.value)}
                     />

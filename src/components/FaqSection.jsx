@@ -2,19 +2,49 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'What documents do I need to rent a car?',
+    question: 'Was macht Transfer511 besonders?',
     answer:
-      'Aqestic optio amet a ququam saepe aliquid voluate dicta fuga dolor saerror sed earum a magni soluta quam minus dolor dolor sed earum a magni soluta autem dolor error error sit',
+      'Bei Transfer511 erleben Sie zuverlässigen Flughafentransfer auf höchstem Niveau. Unsere modernen Fahrzeuge, geschulten Fahrer und unser Fokus auf erstklassigen Service garantieren eine entspannte und pünktliche Ankunft – ob privat oder geschäftlich.',
   },
   {
-    question: 'What age do I need to be to rent a car?',
+    question: 'Wie kann ich eine Reservierung bei Transfer511 vornehmen?',
     answer:
-      'Aqestic optio amet a ququam saepe aliquid voluate dicta fuga dolor saerror sed earum a magni soluta quam minus dolor dolor sed earum a magni soluta autem dolor error error sit',
+      'Ihre Buchung bei Transfer511 ist ganz einfach: Über unsere benutzerfreundliche Website geben Sie Ihre Abhol- und Rückgabedaten ein, wählen Ihr Wunschfahrzeug aus und bestätigen Datum sowie Uhrzeit. Schon ist Ihr Transfer sicher gebucht!',
   },
   {
-    question: 'How do I clean and maintain wallpaper?',
+    question: 'Welche Fahrzeugoptionen gibt es bei Transfer511?',
     answer:
-      'Aqestic optio amet a ququam saepe aliquid voluate dicta fuga dolor saerror sed earum a magni soluta quam minus dolor dolor sed earum a magni soluta autem dolor error error sit',
+      'Unsere vielseitige Flotte bietet Ihnen luxuriöse Limousinen, geräumige SUVs und komfortable Shuttle-Vans. Wählen Sie das passende Fahrzeug je nach Anzahl der Personen und Gepäck – für eine stilvolle und entspannte Fahrt.',
+  },
+  {
+    question: 'Ist Transfer511 rund um die Uhr erreichbar?',
+    answer:
+      'Ja, Transfer511 ist 24 Stunden am Tag, 7 Tage die Woche und 365 Tage im Jahr für Sie erreichbar. Wir wissen, dass Reisepläne flexibel sein müssen – deshalb sind wir jederzeit für Sie da, wenn Sie uns brauchen.',
+  },
+  {
+    question: 'Kann ich meine Reservierung ändern, wenn sich meine Pläne ändern?',
+    answer:
+      'Bei Transfer511 steht Flexibilität an erster Stelle. Sie können Ihre Reservierung problemlos innerhalb eines festgelegten Zeitrahmens vor der Abholung ändern. Melden Sie sich einfach online in Ihrem Kundenkonto an oder kontaktieren Sie unseren Kundenservice.',
+  },
+  {
+    question: 'Wie finde ich meinen Fahrer am Flughafen?',
+    answer:
+      'Transfer511 stellt Ihnen klare Anweisungen für den Treffpunkt zur Verfügung. Ihr freundlicher Fahrer erwartet Sie dort mit einem personalisierten Schild, damit Sie ihn schnell und unkompliziert finden.',
+  },
+  {
+    question: 'Was passiert, wenn mein Flug Verspätung hat?',
+    answer:
+      'Transfer511 verfolgt Ihren Flug in Echtzeit. Bei Verspätungen passen wir Ihre Abholzeit automatisch an, sodass Ihr Fahrer pünktlich bei Ihrer Ankunft bereitsteht.',
+  },
+  {
+    question: 'Kann ich Kindersitze für meine Reise anfordern?',
+    answer:
+      'Ja, bei Transfer511 kümmern wir uns um die Sicherheit Ihrer Familie. Geben Sie einfach während des Buchungsprozesses die Anzahl und Art der benötigten Kindersitze an.',
+  },
+  {
+    question: 'Wie kann ich den Kundensupport von Transfer511 erreichen?',
+    answer:
+      'Unser freundliches Kundenserviceteam ist einfach über die auf unserer Website oder in Ihrer Bestätigungs-E-Mail angegebenen Kontaktdaten erreichbar. Wir sind jederzeit für Sie da und helfen Ihnen gerne bei allen Fragen und Anliegen.',
   },
 ];
 
@@ -29,7 +59,7 @@ const FaqSection = () => {
     <section className="faq-four" id="faq">
       <div className="container">
         <div className="row gutter-y-40">
-          <div className="col-lg-6">
+          {/* <div className="col-lg-6">
             <div
               className="about-two__thumb wow fadeInLeft"
               data-wow-duration="1500ms"
@@ -42,14 +72,13 @@ const FaqSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="col-lg-6">
+          <div className="col-lg-12">
             <div className="faq-four__content">
               <div className="sec-title sec-title--five text-start">
-                <h6 className="sec-title__tagline bw-split-in-right">asked question</h6>
                 <h3 className="sec-title__title bw-split-in-left">
-                  We Care Of Your Safety <br /> And Convenience
+                  Meist gestellte Fragen
                 </h3>
               </div>
 

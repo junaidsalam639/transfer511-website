@@ -5,7 +5,7 @@ const HomeAboutSection = () => {
         <>
             <section className="about-two md:py-20" id="about">
                 <div className="container">
-                    <div className="row gutter-y-30">
+                    <div className="row gutter-y-30 justify-center items-center">
                         <div className="col-lg-6">
                             <div
                                 className="about-two__thumb wow fadeInLeft"
@@ -22,51 +22,70 @@ const HomeAboutSection = () => {
                         </div>
                         <div className="col-lg-6">
                             <div className="about-two__content">
-                                <div className="sec-title sec-title--five text-start">
-                                    <h6 className="sec-title__tagline bw-split-in-right">
-                                        PICK &amp; TRAVEL
-                                    </h6>
-                                    <h3 className="sec-title__title bw-split-in-left">
-                                        Want To Rent A Scooter?
-                                    </h3>
-                                </div>
+                                <h3 className="text-2xl font-bold mb-4">
+                                    Ihre Vorteile bei uns
+                                </h3>
                                 <div className="about-two__feature">
-                                    <div
-                                        className="about-two__feature__item wow fadeInUp"
-                                        data-wow-duration="1500ms"
-                                        data-wow-delay="200ms"
-                                    >
-                                        <div className="about-two__feature__icon">
+                                    <div className='flex'>
+                                        <div className="about-two__feature__icon me-4">
                                             <i className="icon-helmet" />
                                         </div>
                                         <div className="about-two__feature__content">
                                             <h5 className="about-two__feature__title">
-                                                Easy Booking Process
+                                                Kartenakzeptanz
                                             </h5>
                                             <p className="about-two__feature__text">
-                                                We have optimized the booking process so that our clients
-                                                can experience the easiest and the safest service!
+                                                Wir akzeptieren alle gängigen Zahlungsmethoden ohne zusätzliche Gebühren.
                                             </p>
                                         </div>
                                     </div>
                                     <div
-                                        className="about-two__feature__item wow fadeInUp"
-                                        data-wow-duration="1500ms"
-                                        data-wow-delay="200ms"
+                                        className="flex my-2"
                                     >
-                                        <div className="about-two__feature__icon">
+                                        <div className="about-two__feature__icon me-4">
                                             <i className="icon-motorcycle" />
                                         </div>
                                         <div className="about-two__feature__content">
                                             <h5 className="about-two__feature__title">
-                                                Convenient Pick-Up &amp; Return Process
+                                                Kostenlose Wartezeit
                                             </h5>
                                             <p className="about-two__feature__text">
-                                                We have optimized the booking process so that our clients
-                                                can experience the easiest and the safest service!
+                                                Wir versichern Ihnen eine kostenlose Wartezeit von 60 Minuten an allen Flughäfen. Alle anderen Standorte beinhalten eine Wartezeit von 15 Minuten
                                             </p>
                                         </div>
                                     </div>
+
+                                    <div
+                                        className="flex my-2"
+                                    >
+                                        <div className="about-two__feature__icon me-4">
+                                            <i className="icon-helmet" />
+                                        </div>
+                                        <div className="about-two__feature__content">
+                                            <h5 className="about-two__feature__title">
+                                            Festpreis-Garantie
+                                            </h5>
+                                            <p className="about-two__feature__text">
+                                                Starten Sie entspannt – mit transparenten Festpreisen, ohne versteckte Kosten und Bestpreisgarantie
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="flex my-2"
+                                    >
+                                        <div className="about-two__feature__icon me-4">
+                                            <i className="icon-motorcycle" />
+                                        </div>
+                                        <div className="about-two__feature__content">
+                                            <h5 className="about-two__feature__title">
+                                                Kostenfreie Stornierung
+                                            </h5>
+                                            <p className="about-two__feature__text">
+                                                Planänderung? Kein Problem! Bei Transfer511 stornieren Sie kostenfrei – ganz ohne Buchungs- oder Kreditkartengebühren, wenn Sie uns mindestens 4 Stunden vor der Fahrt informieren.
+                                            </p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
