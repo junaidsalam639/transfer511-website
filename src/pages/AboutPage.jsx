@@ -8,7 +8,7 @@ const AboutPage = () => {
         <>
             <Layout>
                 <AboutSection />
-                <div className='pb-20'>
+                <div className='py-20'>
                     <FaqSection />
                 </div>
             </Layout>

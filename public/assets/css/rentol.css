@@ -20120,14 +20120,14 @@ body.megamenu-popup-active .mobile-nav__content {
 .banner-form__wrapper .banner-form .banner-form__control input[type=email] {
   width: 100%;
   background-color: var(--rentol-white, #fff);
-  height: 65px;
+  height: 50px;
   padding: 20px 30px;
   font-family: var(--rentol-font, "Manrope", sans-serif);
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 171%;
-  border-radius: 100px;
+  border-radius: 8px;
   text-transform: capitalize;
   color: var(--rentol-text, #7E7E7E);
   border: 1px solid transparent !important;
@@ -20182,9 +20182,9 @@ body.megamenu-popup-active .mobile-nav__content {
   }
 }
 .banner-form__wrapper .banner-form__button .rentol-btn {
-  border-radius: 100px;
+  border-radius: 8px;
   background-color: var(--rentol-white, #fff);
-  padding: 17.5px 20px;
+  padding: 10.5px 20px;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -21719,7 +21719,7 @@ body.boxed-wrapper .main-slider-one__video {
   z-index: 100 !important;
 }
 .rs-input-group{
-  border-radius: 40px !important;
+  border-radius: 8px !important;
 }
 .rs-picker-toggle-wrapper{
   width: 100% !important;

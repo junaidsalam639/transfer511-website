@@ -106,10 +106,10 @@ const DistanceCalculator = forwardRef(({ GOOGLE_MAPS_API_KEY, onSearch }, ref) =
 
     return (
         <>
-            <div className="banner-form__control">
+            <div className="w-full ">
                 <Autocomplete onLoad={setStartAutocomplete} onPlaceChanged={handleStartPlaceSelected}>
                     <input
-                        className="rentol-datepicker"
+                        className='py-3 px-2 w-full rounded-lg'
                         type="text"
                         placeholder="Abholadresse - Komplett-Adresse eingeben"
                         value={startAddress}
@@ -117,10 +117,10 @@ const DistanceCalculator = forwardRef(({ GOOGLE_MAPS_API_KEY, onSearch }, ref) =
                     />
                 </Autocomplete>
             </div>
-            <div className="banner-form__control">
+            <div className="w-full">
                 <Autocomplete onLoad={setEndAutocomplete} onPlaceChanged={handleEndPlaceSelected}>
                     <input
-                        className="rentol-datepicker"
+                        className='py-3 px-2 w-full rounded-lg'
                         type="text"
                         placeholder="Destination address - Enter complete address"
                         value={endAddress}

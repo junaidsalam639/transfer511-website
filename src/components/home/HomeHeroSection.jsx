@@ -10,10 +10,10 @@ import { TimePicker } from 'rsuite';
 import "react-datepicker/dist/react-datepicker.css";
 import 'rsuite/dist/rsuite.min.css';
 
-function TimePickerExample() {
+function TimePickerExample({ placeholder }) {
     return (
         <div className="banner-form__control" style={{ overflow: 'visible' }}>
-            <TimePicker format="HH:mm" />
+            <TimePicker format="HH:mm" placeholder={placeholder} />
         </div>
     );
 }
@@ -45,6 +45,8 @@ export const GOOGLE_MAPS_API_KEY = 'AIzaSyDXJS_VZMhnp0szh92aZGg8RHszz6RMQN8';
 
 const HomeHeroSection = () => {
     const [startDate, setStartDate] = useState(new Date());
+    const [activeTab, setActiveTab] = useState('einfachefahrt');
+    const [returnDate, setReturnDate] = useState(new Date());
     const distanceRef = useRef();
     const navigate = useNavigate();
 
@@ -88,7 +90,7 @@ const HomeHeroSection = () => {
                         </div>
                     </SwiperSlide>
                 ))}
-                <div className='absolute lg:bottom-56 md:bottom-12 bottom-20 w-full md:px-20'>
+                <div className='absolute md:bottom-40 bottom-20 w-full md:px-20'>
                     <div
                         style={{
                             padding: '20px',
@@ -97,32 +99,66 @@ const HomeHeroSection = () => {
                         }}
                         className="relative z-10 rounded-2xl"
                     >
+                        <div className="flex gap-4 mb-4">
+                            <button
+                                className={`px-4 py-3 rounded-lg font-semibold ${activeTab === 'einfachefahrt' ? 'bg-[#E66431] text-white' : 'bg-gray-300 text-black'}`}
+                                onClick={() => setActiveTab('einfachefahrt')}
+                            >
+                                Einfache Fahrt
+                            </button>
+                            <button
+                                className={`px-4 py-3 rounded-lg font-semibold ${activeTab === 'rueckfahrt' ? 'bg-[#E66431] text-white' : 'bg-gray-300 text-black'}`}
+                                onClick={() => setActiveTab('rueckfahrt')}
+                            >
+                                Hin & Rückfahrt
+                            </button>
+                        </div>
+
                         <h2 className="text-2xl text-black font-bold">Berechnen Sie jetzt Ihren Preis!</h2>
                         <h2 className="text-2xl text-black font-bold mb-4">Unverbindlich abfragen – ohne versteckte Kosten.</h2>
 
                         <form className="banner-form__wrapper" onSubmit={(e) => e.preventDefault()}>
-                            <div className="banner-form grid md:grid-cols-3 grid-cols-2 gap-4">
-                                <DistanceCalculator
-                                    ref={distanceRef}
-                                    GOOGLE_MAPS_API_KEY={GOOGLE_MAPS_API_KEY}
-                                    onSearch={handleTripSearch}
-                                />
-                                <div className="banner-form__control">
-                                    <DatePicker
-                                        selected={startDate}
-                                        onChange={(date) => setStartDate(date)}
+                            <div className="banner-form">
+                                <div className="flex gap-2">
+                                    <DistanceCalculator
+                                        ref={distanceRef}
+                                        GOOGLE_MAPS_API_KEY={GOOGLE_MAPS_API_KEY}
+                                        onSearch={handleTripSearch}
                                     />
                                 </div>
-                                <div className="banner-form__control">
-                                    <TimePickerExample />
-                                </div>
-                                <div className="banner-form__control">
-                                    <input className="rentol-timepicker" type="text" placeholder="AnyWay" />
-                                </div>
-                                <div className="banner-form__control banner-form__button">
-                                    <button className="rentol-btn w-full" type="button" onClick={handleSearchClick}>
-                                        Search <span className="icon-motorbike" />
-                                    </button>
+
+                                <div className="flex gap-2 mt-2">
+                                    <div className="w-full">
+                                        <DatePicker
+                                            selected={startDate}
+                                            onChange={(date) => setStartDate(date)}
+                                            placeholderText="Startdatum wählen"
+                                            className='py-3 px-2 w-full rounded-lg'
+                                        />
+                                    </div>
+                                    <div className="banner-form__control w-full">
+                                        <TimePickerExample placeholder="Abholzeit / Ankunftszeit" />
+                                    </div>
+                                    {activeTab === 'rueckfahrt' && (
+                                        <>
+                                            <div className="w-full">
+                                                <DatePicker
+                                                    selected={returnDate}
+                                                    onChange={(date) => setReturnDate(date)}
+                                                    placeholderText="Rückreisedatum wählen"
+                                                    className='py-3 px-2 w-full rounded-lg'
+                                                />
+                                            </div>
+                                            <div className="banner-form__control w-full">
+                                                <TimePickerExample placeholder="Planmässige Ankunft" />
+                                            </div>
+                                        </>
+                                    )}
+                                    <div className="banner-form__control banner-form__button w-full">
+                                        <button className="rentol-btn w-full" type="button" onClick={handleSearchClick}>
+                                            Search <span className="icon-motorbike" />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
